@@ -3,11 +3,13 @@
 one:
   username: MyString
   password_digest: MyString
+  email: MyString
   first_name: MyString
   last_name: MyString
 
 two:
   username: MyString
   password_digest: MyString
+  email: MyString
   first_name: MyString
   last_name: MyString
