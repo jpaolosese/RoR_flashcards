@@ -1,2 +1,14 @@
-<h1>Decks#index</h1>
-<p>Find me in app/views/decks/index.html.erb</p>
+<p style="color: green"><%= notice %></p>
+
+<h1>Decks</h1>
+
+<div id="decks">
+  <% @decks.each do |deck| %>
+    <%= render deck %>
+    <p>
+      <%= link_to "Show this deck", deck %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New deck", new_deck_path %>

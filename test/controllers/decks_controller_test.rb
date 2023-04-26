@@ -1,38 +1,48 @@
 require "test_helper"
 
 class DecksControllerTest < ActionDispatch::IntegrationTest
-  test "should get index" do
-    get decks_index_url
-    assert_response :success
+  setup do
+    @deck = decks(:one)
   end
 
-  test "should get show" do
-    get decks_show_url
+  test "should get index" do
+    get decks_url
     assert_response :success
   end
 
   test "should get new" do
-    get decks_new_url
+    get new_deck_url
     assert_response :success
   end
 
-  test "should get create" do
-    get decks_create_url
+  test "should create deck" do
+    assert_difference("Deck.count") do
+      post decks_url, params: { deck: { card_count: @deck.card_count, topic: @deck.topic, user_id: @deck.user_id } }
+    end
+
+    assert_redirected_to deck_url(Deck.last)
+  end
+
+  test "should show deck" do
+    get deck_url(@deck)
     assert_response :success
   end
 
   test "should get edit" do
-    get decks_edit_url
+    get edit_deck_url(@deck)
     assert_response :success
   end
 
-  test "should get update" do
-    get decks_update_url
-    assert_response :success
+  test "should update deck" do
+    patch deck_url(@deck), params: { deck: { card_count: @deck.card_count, topic: @deck.topic, user_id: @deck.user_id } }
+    assert_redirected_to deck_url(@deck)
   end
 
-  test "should get destroy" do
-    get decks_destroy_url
-    assert_response :success
+  test "should destroy deck" do
+    assert_difference("Deck.count", -1) do
+      delete deck_url(@deck)
+    end
+
+    assert_redirected_to decks_url
   end
 end
