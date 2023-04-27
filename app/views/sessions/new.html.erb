@@ -1,0 +1,15 @@
+<h1>Login to Cards Against Idiocracy</h1>
+
+<%= form_with model: @session_request, url: auth_login_path do |form| %>
+  <div>
+    <%= form.label :email %> <br/>
+    <%= form.text_field :email %>
+  </div>
+  <div>
+    <%= form.label :password %> <br/>
+    <%= form.password_field :password %>
+  </div>
+  <div>
+    <%= form.submit "Log in" %>
+  </div>
+<% end %>

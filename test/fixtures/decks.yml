@@ -1,11 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  topic: MyString
+  topic: Category 1
   card_count: 1
   user: one
 
 two:
-  topic: MyString
+  topic: Category 2
   card_count: 1
   user: two

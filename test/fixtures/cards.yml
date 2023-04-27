@@ -1,11 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  question: MyString
-  answer: MyString
+  question: What has roots as nobody sees, is taller than trees, up, up it goes, and yet never grows?
+  answer: A mountain.
   deck: one
 
 two:
-  question: MyString
-  answer: MyString
+  question: What is the greatest wonder?
+  answer: Every day, men die. Yet those that remain live as though immortal.
   deck: two

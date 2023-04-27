@@ -37,3 +37,138 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 401ms (Views: 320.7ms | ActiveRecord: 0.0ms | Allocations: 5664)
 
 
+Started GET "/" for 127.0.0.1 at 2023-04-26 13:36:27 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.3ms | Allocations: 296)
+Completed 200 OK in 7ms (Views: 4.0ms | Allocations: 1007)
+
+
+Started GET "/style.css" for 127.0.0.1 at 2023-04-27 09:04:05 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/style.css"):
+  
+Started GET "/auth/login" for 127.0.0.1 at 2023-04-27 09:04:17 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 24.7ms | Allocations: 3099)
+  Rendered layout layouts/application.html.erb (Duration: 912.5ms | Allocations: 86176)
+Completed 500 Internal Server Error in 938ms (ActiveRecord: 0.0ms | Allocations: 89529)
+
+
+  
+ActionView::Template::Error (Permission denied @ rb_sysopen - C:/Users/frzfe/Desktop/ror_flashcards/tmp/cache/assets/sprockets/v4.0.0/cK/cKQXKS6FapGdsB209RJfB9hNpd9xmOxEpppzVCKhpUM.cache):
+  
+sprockets (4.2.0) lib/sprockets/cache/file_store.rb:178:in `initialize'
+sprockets (4.2.0) lib/sprockets/cache/file_store.rb:178:in `open'
+sprockets (4.2.0) lib/sprockets/cache/file_store.rb:178:in `safe_open'
+sprockets (4.2.0) lib/sprockets/cache/file_store.rb:59:in `get'
+sprockets (4.2.0) lib/sprockets/cache.rb:223:in `get'
+sprockets (4.2.0) lib/sprockets/cache.rb:122:in `get'
+sprockets (4.2.0) lib/sprockets/loader.rb:326:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.0) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.0) lib/sprockets/bundle.rb:27:in `call'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:84:in `call_processor'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:66:in `block in call_processors'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:65:in `reverse_each'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:65:in `call_processors'
+sprockets (4.2.0) lib/sprockets/loader.rb:182:in `load_from_unloaded'
+sprockets (4.2.0) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.2.0) lib/sprockets/loader.rb:337:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.0) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.0) lib/sprockets/bundle.rb:32:in `block in call'
+C:/Ruby31-x64/lib/ruby/3.1.0/set.rb:511:in `each_key'
+C:/Ruby31-x64/lib/ruby/3.1.0/set.rb:511:in `each'
+sprockets (4.2.0) lib/sprockets/bundle.rb:31:in `call'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:84:in `call_processor'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:66:in `block in call_processors'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:65:in `reverse_each'
+sprockets (4.2.0) lib/sprockets/processor_utils.rb:65:in `call_processors'
+sprockets (4.2.0) lib/sprockets/loader.rb:182:in `load_from_unloaded'
+sprockets (4.2.0) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.2.0) lib/sprockets/loader.rb:337:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.0) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.0) lib/sprockets/base.rb:81:in `find_asset'
+sprockets (4.2.0) lib/sprockets/base.rb:88:in `find_all_linked_assets'
+sprockets (4.2.0) lib/sprockets/manifest.rb:125:in `each'
+sprockets (4.2.0) lib/sprockets/manifest.rb:125:in `to_a'
+sprockets (4.2.0) lib/sprockets/manifest.rb:125:in `block (2 levels) in find'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `block in synchronize'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `synchronize'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `synchronize'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:22:in `execute'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/promise.rb:564:in `block in realize'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `run_task'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:343:in `block (3 levels) in create_worker'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `loop'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block (2 levels) in create_worker'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `catch'
+concurrent-ruby (1.2.2) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `block in create_worker'
+Started GET "/login" for 127.0.0.1 at 2023-04-27 09:04:26 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+Started GET "/auth/login" for 127.0.0.1 at 2023-04-27 09:04:38 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 786)
+  Rendered layout layouts/application.html.erb (Duration: 80.9ms | Allocations: 34325)
+Completed 200 OK in 84ms (Views: 82.3ms | ActiveRecord: 0.0ms | Allocations: 34683)
+
+
+Started GET "/auth/login" for 127.0.0.1 at 2023-04-27 09:05:05 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1300)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 3972)
+Completed 200 OK in 21ms (Views: 17.1ms | ActiveRecord: 0.0ms | Allocations: 4833)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-27 09:05:26 -0700
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session_request"=>{"email"=>"one@one.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "one@one.com"], ["LIMIT", 1]]
+  ↳ app/forms/session_request.rb:11:in `authenticate'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 758)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 3165)
+Completed 401 Unauthorized in 27ms (Views: 11.9ms | ActiveRecord: 0.7ms | Allocations: 7735)
+
+
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "j.doe"], ["password_digest", "[FILTERED]"], ["email", "j.doe@gmail.com"], ["first_name", "john"], ["last_name", "doe"], ["created_at", "2023-04-27 16:10:20.033181"], ["updated_at", "2023-04-27 16:10:20.033181"]]
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[36mcommit transaction[0m
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-27 09:10:52 -0700
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session_request"=>{"email"=>"j.doe@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "j.doe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/forms/session_request.rb:11:in `authenticate'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 315ms (ActiveRecord: 0.6ms | Allocations: 11566)
+
+
+Started GET "/style.css" for 127.0.0.1 at 2023-04-27 09:10:53 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/style.css"):
+  

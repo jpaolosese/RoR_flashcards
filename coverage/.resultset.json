@@ -105,6 +105,46 @@
           null
         ]
       },
+      "C:/Users/frzfe/Desktop/ror_flashcards/test/controllers/sessions_controller_test.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null
+        ]
+      },
       "C:/Users/frzfe/Desktop/ror_flashcards/test/controllers/users_controller_test.rb": {
         "lines": [
           1,
@@ -191,6 +231,6 @@
         ]
       }
     },
-    "timestamp": 1682541114
+    "timestamp": 1682611324
   }
 }
