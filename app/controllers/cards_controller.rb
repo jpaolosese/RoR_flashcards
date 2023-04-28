@@ -25,7 +25,8 @@ class CardsController < ApplicationController
 
     respond_to do |format|
       if @card.save
-        format.html { redirect_to card_url(@card), notice: "Card was successfully created." }
+        @deck.card_count += 1
+        format.html { redirect_to user_decks_path(@card), notice: "Card was successfully created." }
         format.json { render :show, status: :created, location: @card }
       else
         format.html { render :new, status: :unprocessable_entity }

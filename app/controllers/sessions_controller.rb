@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     @session_request = SessionRequest.new(session_request_params)
     if @user = @session_request.authenticate
       session[:user_id] = @user.id
-      redirect_to root_path
+      redirect_to user_decks_path(@user)
     else
       render :new, status: :unauthorized
     end

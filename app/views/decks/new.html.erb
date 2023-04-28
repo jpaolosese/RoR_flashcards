@@ -1,9 +1,18 @@
 <h1>New deck</h1>
 
-<%= render "form", deck: @deck %>
+<%#= render "form", deck: @deck %>
 
 <br>
 
 <div>
-  <%= link_to "Back to decks", decks_path %>
+  <%= form_with model: @deck, url: new_user_deck_url do |form| %>
+    <div>
+      <%= form.label :topic %><br/>
+      <%= form.text_field :topic %>
+    </div>
+    <div>
+      <%= form.submit "Create deck" %>
+    </div>
+  <% end %>
+  <%= link_to "Back to decks", user_decks_path %>
 </div>

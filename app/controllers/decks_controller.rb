@@ -1,6 +1,5 @@
 class DecksController < ApplicationController
   before_action :set_deck, only: %i[ show edit update destroy ]
-
   # GET /decks or /decks.json
   def index
     @decks = Deck.all
@@ -8,6 +7,7 @@ class DecksController < ApplicationController
 
   # GET /decks/1 or /decks/1.json
   def show
+    @deck = Deck.where(user_id: params[:user_id], id: params[:id]).first
   end
 
   # GET /decks/new
@@ -17,15 +17,17 @@ class DecksController < ApplicationController
 
   # GET /decks/1/edit
   def edit
+
   end
 
   # POST /decks or /decks.json
   def create
     @deck = Deck.new(deck_params)
+    @deck.card_count = 0
 
     respond_to do |format|
       if @deck.save
-        format.html { redirect_to deck_url(@deck), notice: "Deck was successfully created." }
+        format.html { redirect_to user_decks_url, notice: "Deck was successfully created." }
         format.json { render :show, status: :created, location: @deck }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +40,7 @@ class DecksController < ApplicationController
   def update
     respond_to do |format|
       if @deck.update(deck_params)
-        format.html { redirect_to deck_url(@deck), notice: "Deck was successfully updated." }
+        format.html { redirect_to user_decks_url(@deck), notice: "Deck was successfully updated." }
         format.json { render :show, status: :ok, location: @deck }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,7 +54,7 @@ class DecksController < ApplicationController
     @deck.destroy
 
     respond_to do |format|
-      format.html { redirect_to decks_url, notice: "Deck was successfully destroyed." }
+      format.html { redirect_to user_decks_url, notice: "Deck was successfully destroyed." }
       format.json { head :no_content }
     end
   end

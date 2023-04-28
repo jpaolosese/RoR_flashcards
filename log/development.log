@@ -172,3 +172,886 @@ Started GET "/style.css" for 127.0.0.1 at 2023-04-27 09:10:53 -0700
   
 ActionController::RoutingError (No route matches [GET] "/style.css"):
   
+Started GET "/auth/login" for 127.0.0.1 at 2023-04-27 09:17:31 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 881)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 3289)
+Completed 200 OK in 14ms (Views: 11.4ms | Allocations: 3598)
+
+
+Started GET "/auth/login" for 127.0.0.1 at 2023-04-27 09:35:28 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 829)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 3126)
+Completed 200 OK in 12ms (Views: 9.7ms | Allocations: 3405)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-27 09:35:47 -0700
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session_request"=>{"email"=>"j.doe@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "j.doe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/forms/session_request.rb:11:in `authenticate'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 207ms (ActiveRecord: 0.5ms | Allocations: 1196)
+
+
+Started GET "/decks" for 127.0.0.1 at 2023-04-27 11:17:54 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DecksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering decks/index.html.erb within layouts/application
+  [1m[36mDeck Load (0.4ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/views/decks/index.html.erb:6
+  Rendered decks/index.html.erb within layouts/application (Duration: 25.7ms | Allocations: 6422)
+  Rendered layout layouts/application.html.erb (Duration: 27.0ms | Allocations: 6530)
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 0.4ms | Allocations: 12134)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_deck_path' for #<ActionView::Base:0x0000000000ba40>
+
+'.freeze;@output_buffer.append=( link_to "New deck", new_deck_path );
+                                                     ^^^^^^^^^^^^^
+Did you mean?  decks_new_path):
+    11:   <% end %>
+    12: </div>
+    13: 
+    14: <%= link_to "New deck", new_deck_path %>
+  
+app/views/decks/index.html.erb:14
+Started GET "/auth/login" for 127.0.0.1 at 2023-04-27 11:18:10 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 20.5ms | Allocations: 3221)
+  Rendered layout layouts/application.html.erb (Duration: 489.5ms | Allocations: 40236)
+Completed 200 OK in 506ms (Views: 495.3ms | ActiveRecord: 0.0ms | Allocations: 42137)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-27 11:18:27 -0700
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session_request"=>{"email"=>"j.doe@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "j.doe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/forms/session_request.rb:11:in `authenticate'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 225ms (ActiveRecord: 1.4ms | Allocations: 9142)
+
+
+Started GET "/auth/login" for 127.0.0.1 at 2023-04-27 23:06:45 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 121.5ms | Allocations: 3594)
+  Rendered layout layouts/application.html.erb (Duration: 670.6ms | Allocations: 40479)
+Completed 200 OK in 820ms (Views: 709.5ms | ActiveRecord: 0.0ms | Allocations: 45202)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-27 23:07:07 -0700
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session_request"=>{"email"=>"j.doe@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "j.doe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/forms/session_request.rb:11:in `authenticate'
+Completed 500 Internal Server Error in 253ms (ActiveRecord: 1.0ms | Allocations: 10337)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"index", :controller=>"decks"}, missing required keys: [:user_id]
+Did you mean?  user_decks_url):
+  
+app/controllers/sessions_controller.rb:12:in `create'
+Started GET "/auth/login" for 127.0.0.1 at 2023-04-27 23:07:32 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1165)
+  Rendered layout layouts/application.html.erb (Duration: 25.4ms | Allocations: 15520)
+Completed 200 OK in 33ms (Views: 27.1ms | Allocations: 16920)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-27 23:07:40 -0700
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session_request"=>{"email"=>"j.doe@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "j.doe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/forms/session_request.rb:11:in `authenticate'
+Completed 500 Internal Server Error in 216ms (ActiveRecord: 2.0ms | Allocations: 5343)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"index", :controller=>"decks"}, missing required keys: [:user_id]
+Did you mean?  user_decks_path):
+  
+app/controllers/sessions_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (2.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "jdoe"], ["password_digest", "[FILTERED]"], ["email", "jdoe@gmail.com"], ["first_name", "john"], ["last_name", "doe"], ["created_at", "2023-04-28 06:15:10.630779"], ["updated_at", "2023-04-28 06:15:10.630779"]]
+  [1m[36mTRANSACTION (7.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (8.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "username1"], ["password_digest", "[FILTERED]"], ["email", "user@username.com"], ["first_name", "user"], ["last_name", "name"], ["created_at", "2023-04-28 06:17:24.446742"], ["updated_at", "2023-04-28 06:17:24.446742"]]
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/auth/login" for 127.0.0.1 at 2023-04-27 23:23:10 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1198)
+  Rendered layout layouts/application.html.erb (Duration: 24.3ms | Allocations: 15554)
+Completed 200 OK in 31ms (Views: 25.9ms | Allocations: 16954)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-27 23:23:28 -0700
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session_request"=>{"email"=>"jdoe@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jdoe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/forms/session_request.rb:11:in `authenticate'
+Completed 500 Internal Server Error in 209ms (ActiveRecord: 0.5ms | Allocations: 4827)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"index", :controller=>"decks"}, missing required keys: [:user_id]
+Did you mean?  user_decks_path):
+  
+app/controllers/sessions_controller.rb:12:in `create'
+Started GET "/auth/login" for 127.0.0.1 at 2023-04-27 23:23:58 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1177)
+  Rendered layout layouts/application.html.erb (Duration: 26.6ms | Allocations: 15532)
+Completed 200 OK in 34ms (Views: 28.4ms | Allocations: 16929)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-27 23:24:04 -0700
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session_request"=>{"email"=>"jdoe@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jdoe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/forms/session_request.rb:11:in `authenticate'
+Completed 500 Internal Server Error in 218ms (ActiveRecord: 1.6ms | Allocations: 5316)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"index", :controller=>"decks"}, missing required keys: [:user_id]
+Did you mean?  user_decks_url):
+  
+app/controllers/sessions_controller.rb:12:in `create'
+Started GET "/auth/login" for 127.0.0.1 at 2023-04-27 23:25:05 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 18.0ms | Allocations: 3735)
+  Rendered layout layouts/application.html.erb (Duration: 106.1ms | Allocations: 40623)
+Completed 200 OK in 139ms (Views: 115.9ms | ActiveRecord: 0.0ms | Allocations: 45346)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-27 23:25:11 -0700
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session_request"=>{"email"=>"jdoe@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jdoe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/forms/session_request.rb:11:in `authenticate'
+Completed 500 Internal Server Error in 221ms (ActiveRecord: 0.9ms | Allocations: 10344)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"index", :controller=>"decks"}, missing required keys: [:user_id]
+Did you mean?  user_decks_path):
+  
+app/controllers/sessions_controller.rb:12:in `create'
+Started GET "/auth/login" for 127.0.0.1 at 2023-04-27 23:45:19 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1186)
+  Rendered layout layouts/application.html.erb (Duration: 31.8ms | Allocations: 15547)
+Completed 200 OK in 38ms (Views: 33.3ms | Allocations: 16947)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-27 23:45:27 -0700
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session_request"=>{"email"=>"jdoe@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jdoe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/forms/session_request.rb:11:in `authenticate'
+Completed 500 Internal Server Error in 208ms (ActiveRecord: 0.6ms | Allocations: 4865)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"index", :controller=>"decks"}, missing required keys: [:user_id]
+Did you mean?  user_decks_url):
+  
+app/controllers/sessions_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (8.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "username1"], ["password_digest", "[FILTERED]"], ["email", "user@username.com"], ["first_name", "user"], ["last_name", "name"], ["created_at", "2023-04-28 06:46:19.836606"], ["updated_at", "2023-04-28 06:46:19.836606"]]
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (8.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "email", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["username", "jdoe"], ["password_digest", "[FILTERED]"], ["email", "jdoe@gmail.com"], ["first_name", "john"], ["last_name", "doe"], ["created_at", "2023-04-28 06:46:44.734032"], ["updated_at", "2023-04-28 06:46:44.734032"]]
+  [1m[36mTRANSACTION (6.2ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/auth/login" for 127.0.0.1 at 2023-04-27 23:47:42 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1186)
+  Rendered layout layouts/application.html.erb (Duration: 24.1ms | Allocations: 15541)
+Completed 200 OK in 31ms (Views: 25.9ms | Allocations: 16941)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-27 23:47:49 -0700
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session_request"=>{"email"=>"jdoe@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jdoe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/forms/session_request.rb:11:in `authenticate'
+Completed 500 Internal Server Error in 214ms (ActiveRecord: 1.8ms | Allocations: 5301)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"index", :controller=>"decks"}, missing required keys: [:user_id]
+Did you mean?  user_decks_url):
+  
+app/controllers/sessions_controller.rb:12:in `create'
+Started GET "/routes" for 127.0.0.1 at 2023-04-27 23:48:35 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/routes"):
+  
+Started GET "/routes" for 127.0.0.1 at 2023-04-27 23:50:46 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/routes"):
+  
+Started GET "/auth/login" for 127.0.0.1 at 2023-04-27 23:50:56 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1189)
+  Rendered layout layouts/application.html.erb (Duration: 26.2ms | Allocations: 15544)
+Completed 200 OK in 33ms (Views: 27.7ms | Allocations: 16941)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-27 23:51:09 -0700
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session_request"=>{"email"=>"jdoe@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jdoe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/forms/session_request.rb:11:in `authenticate'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 210ms (ActiveRecord: 1.1ms | Allocations: 4819)
+
+
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mDeck Create (1.0ms)[0m  [1m[32mINSERT INTO "decks" ("topic", "card_count", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["topic", "History"], ["card_count", 0], ["user_id", 5], ["created_at", "2023-04-28 06:54:12.757499"], ["updated_at", "2023-04-28 06:54:12.757499"]]
+  [1m[36mTRANSACTION (4.5ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/register" for 127.0.0.1 at 2023-04-27 23:55:31 -0700
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 27.1ms | Allocations: 5479)
+  Rendered users/new.html.erb within layouts/application (Duration: 43.5ms | Allocations: 5795)
+  Rendered layout layouts/application.html.erb (Duration: 44.2ms | Allocations: 5878)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 0.9ms | Allocations: 9946)
+
+
+  
+ActionView::Template::Error (undefined method `users_path' for #<ActionView::Base:0x00000000023af0>
+
+              recipient.public_send(method, *args, options)
+                       ^^^^^^^^^^^^
+Did you mean?  user_decks_path):
+    1: <%= form_with(model: user) do |form| %>
+    2:   <% if user.errors.any? %>
+    3:     <div style="color: red">
+    4:       <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+  
+app/views/users/_form.html.erb:1
+app/views/users/new.html.erb:3
+Started GET "/user/5/decks" for 127.0.0.1 at 2023-04-27 23:55:45 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/user/5/decks"):
+  
+Started GET "/users/5/decks" for 127.0.0.1 at 2023-04-27 23:55:57 -0700
+Processing by DecksController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  Rendering layout layouts/application.html.erb
+  Rendering decks/index.html.erb within layouts/application
+  [1m[36mDeck Load (0.2ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/views/decks/index.html.erb:6
+  Rendered decks/_deck.html.erb (Duration: 4.6ms | Allocations: 261)
+  Rendered decks/index.html.erb within layouts/application (Duration: 42.0ms | Allocations: 10108)
+  Rendered layout layouts/application.html.erb (Duration: 42.7ms | Allocations: 10191)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 1.0ms | Allocations: 12198)
+
+
+  
+ActionView::Template::Error (undefined method `deck_path' for #<ActionView::Base:0x000000000241a8>
+
+              target.public_send(method, *args)
+                    ^^^^^^^^^^^^):
+     6:   <% @decks.each do |deck| %>
+     7:     <%= render deck %>
+     8:     <p>
+     9:       <%= link_to "Show this deck", deck %>
+    10:     </p>
+    11:   <% end %>
+    12: </div>
+  
+app/views/decks/index.html.erb:9
+app/views/decks/index.html.erb:6
+Started GET "/users/5/decks" for 127.0.0.1 at 2023-04-27 23:57:30 -0700
+Processing by DecksController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  Rendering layout layouts/application.html.erb
+  Rendering decks/index.html.erb within layouts/application
+  [1m[36mDeck Load (0.2ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/views/decks/index.html.erb:6
+  Rendered decks/_deck.html.erb (Duration: 0.7ms | Allocations: 200)
+  Rendered decks/index.html.erb within layouts/application (Duration: 20.1ms | Allocations: 6087)
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | Allocations: 6170)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.2ms | Allocations: 7041)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_deck_path' for #<ActionView::Base:0x000000000244f0>
+
+'.freeze;@output_buffer.append=( link_to "New deck", new_deck_path );
+                                                     ^^^^^^^^^^^^^
+Did you mean?  user_deck_path
+               user_decks_path):
+     8:   <% end %>
+     9: </div>
+    10: 
+    11: <%= link_to "New deck", new_deck_path %>
+  
+app/views/decks/index.html.erb:11
+Started GET "/users/5/decks" for 127.0.0.1 at 2023-04-27 23:58:19 -0700
+Processing by DecksController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  Rendering layout layouts/application.html.erb
+  Rendering decks/index.html.erb within layouts/application
+  [1m[36mDeck Load (0.2ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/views/decks/index.html.erb:6
+  Rendered decks/_deck.html.erb (Duration: 0.8ms | Allocations: 200)
+  Rendered decks/index.html.erb within layouts/application (Duration: 12.6ms | Allocations: 1576)
+  Rendered layout layouts/application.html.erb (Duration: 40.5ms | Allocations: 16132)
+Completed 200 OK in 49ms (Views: 45.9ms | ActiveRecord: 0.2ms | Allocations: 17038)
+
+
+Started GET "/users/5/decks/new" for 127.0.0.1 at 2023-04-27 23:58:28 -0700
+Processing by DecksController#new as HTML
+  Parameters: {"user_id"=>"5"}
+  Rendering layout layouts/application.html.erb
+  Rendering decks/new.html.erb within layouts/application
+  Rendered decks/_form.html.erb (Duration: 21.3ms | Allocations: 5332)
+  Rendered decks/new.html.erb within layouts/application (Duration: 29.7ms | Allocations: 5588)
+  Rendered layout layouts/application.html.erb (Duration: 30.4ms | Allocations: 5665)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms | Allocations: 6032)
+
+
+  
+ActionView::Template::Error (undefined method `decks_path' for #<ActionView::Base:0x00000000024928>
+
+              recipient.public_send(method, *args, options)
+                       ^^^^^^^^^^^^
+Did you mean?  user_deck_path):
+    1: <%= form_with(model: deck) do |form| %>
+    2:   <% if deck.errors.any? %>
+    3:     <div style="color: red">
+    4:       <h2><%= pluralize(deck.errors.count, "error") %> prohibited this deck from being saved:</h2>
+  
+app/views/decks/_form.html.erb:1
+app/views/decks/new.html.erb:3
+Started GET "/users/5/decks" for 127.0.0.1 at 2023-04-27 23:58:30 -0700
+Processing by DecksController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  Rendering layout layouts/application.html.erb
+  Rendering decks/index.html.erb within layouts/application
+  [1m[36mDeck Load (0.2ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/views/decks/index.html.erb:6
+  Rendered decks/_deck.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered decks/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 878)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 3183)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.2ms | Allocations: 3475)
+
+
+Started GET "/users/5/decks/new" for 127.0.0.1 at 2023-04-27 23:59:18 -0700
+Processing by DecksController#new as HTML
+  Parameters: {"user_id"=>"5"}
+  Rendering layout layouts/application.html.erb
+  Rendering decks/new.html.erb within layouts/application
+  Rendered decks/_form.html.erb (Duration: 5.9ms | Allocations: 4930)
+  Rendered decks/new.html.erb within layouts/application (Duration: 6.6ms | Allocations: 4992)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 5069)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 5338)
+
+
+  
+ActionView::Template::Error (undefined method `decks_path' for #<ActionView::Base:0x00000000024c70>
+
+              recipient.public_send(method, *args, options)
+                       ^^^^^^^^^^^^
+Did you mean?  user_deck_path):
+    1: <%= form_with(model: deck) do |form| %>
+    2:   <% if deck.errors.any? %>
+    3:     <div style="color: red">
+    4:       <h2><%= pluralize(deck.errors.count, "error") %> prohibited this deck from being saved:</h2>
+  
+app/views/decks/_form.html.erb:1
+app/views/decks/new.html.erb:3
+Started GET "/users/5/decks/new" for 127.0.0.1 at 2023-04-28 00:00:01 -0700
+Processing by DecksController#new as HTML
+  Parameters: {"user_id"=>"5"}
+  Rendering layout layouts/application.html.erb
+  Rendering decks/new.html.erb within layouts/application
+  Rendered decks/_form.html.erb (Duration: 6.6ms | Allocations: 5320)
+  Rendered decks/new.html.erb within layouts/application (Duration: 16.0ms | Allocations: 5608)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 5691)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms | Allocations: 6524)
+
+
+  
+ActionView::Template::Error (undefined method `decks_path' for #<ActionView::Base:0x00000000024fb8>
+
+              recipient.public_send(method, *args, options)
+                       ^^^^^^^^^^^^
+Did you mean?  user_deck_path):
+    1: <%= form_with(model: deck) do |form| %>
+    2:   <% if deck.errors.any? %>
+    3:     <div style="color: red">
+    4:       <h2><%= pluralize(deck.errors.count, "error") %> prohibited this deck from being saved:</h2>
+  
+app/views/decks/_form.html.erb:1
+app/views/decks/new.html.erb:3
+Started GET "/users/5/decks/" for 127.0.0.1 at 2023-04-28 00:00:06 -0700
+Processing by DecksController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  Rendering layout layouts/application.html.erb
+  Rendering decks/index.html.erb within layouts/application
+  [1m[36mDeck Load (0.2ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/views/decks/index.html.erb:6
+  Rendered decks/_deck.html.erb (Duration: 1.0ms | Allocations: 198)
+  Rendered decks/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1420)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 4103)
+Completed 200 OK in 16ms (Views: 13.2ms | ActiveRecord: 0.2ms | Allocations: 4502)
+
+
+Started GET "/users/5/decks/new" for 127.0.0.1 at 2023-04-28 00:00:08 -0700
+Processing by DecksController#new as HTML
+  Parameters: {"user_id"=>"5"}
+  Rendering layout layouts/application.html.erb
+  Rendering decks/new.html.erb within layouts/application
+  Rendered decks/_form.html.erb (Duration: 5.3ms | Allocations: 4930)
+  Rendered decks/new.html.erb within layouts/application (Duration: 5.7ms | Allocations: 4992)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 5069)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 5344)
+
+
+  
+ActionView::Template::Error (undefined method `decks_path' for #<ActionView::Base:0x000000000253c8>
+
+              recipient.public_send(method, *args, options)
+                       ^^^^^^^^^^^^
+Did you mean?  user_deck_path):
+    1: <%= form_with(model: deck) do |form| %>
+    2:   <% if deck.errors.any? %>
+    3:     <div style="color: red">
+    4:       <h2><%= pluralize(deck.errors.count, "error") %> prohibited this deck from being saved:</h2>
+  
+app/views/decks/_form.html.erb:1
+app/views/decks/new.html.erb:3
+Started GET "/users/5/decks/new" for 127.0.0.1 at 2023-04-28 00:02:45 -0700
+Processing by DecksController#new as HTML
+  Parameters: {"user_id"=>"5"}
+  Rendering layout layouts/application.html.erb
+  Rendering decks/new.html.erb within layouts/application
+  Rendered decks/new.html.erb within layouts/application (Duration: 8.8ms | Allocations: 283)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 3198)
+Completed 200 OK in 24ms (Views: 21.3ms | ActiveRecord: 0.0ms | Allocations: 4060)
+
+
+Started GET "/users/5/decks/new" for 127.0.0.1 at 2023-04-28 00:12:36 -0700
+Processing by DecksController#new as HTML
+  Parameters: {"user_id"=>"5"}
+  Rendering layout layouts/application.html.erb
+  Rendering decks/new.html.erb within layouts/application
+  Rendered decks/new.html.erb within layouts/application (Duration: 11.5ms | Allocations: 1575)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 1661)
+Completed 500 Internal Server Error in 21ms (Allocations: 2519)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"decks", :user_id=>"5"}, missing required keys: [:id]
+Did you mean?  user_deck_url):
+     5: <br>
+     6: 
+     7: <div>
+     8:   <%= form_with model: @deck, url: user_deck_path %>
+     9: 
+    10:   <%= link_to "Back to decks", user_decks_path %>
+    11: </div>
+  
+app/views/decks/new.html.erb:8
+Started GET "/users/5/decks/new" for 127.0.0.1 at 2023-04-28 00:17:49 -0700
+Processing by DecksController#new as HTML
+  Parameters: {"user_id"=>"5"}
+  Rendering layout layouts/application.html.erb
+  Rendering decks/new.html.erb within layouts/application
+  Rendered decks/new.html.erb within layouts/application (Duration: 10.8ms | Allocations: 1608)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 1694)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.3ms | Allocations: 5301)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"decks", :user_id=>"5"}, missing required keys: [:id]
+Did you mean?  user_deck_url):
+     5: <br>
+     6: 
+     7: <div>
+     8:   <%= form_with model: @deck, url: user_deck_path do |form| %>
+     9:     <div>
+    10:       <%= form.label :topic %><br/>
+    11:       <%= form.text_field :topic %>
+  
+app/views/decks/new.html.erb:8
+Started GET "/users/5/decks/new" for 127.0.0.1 at 2023-04-28 00:19:26 -0700
+Processing by DecksController#new as HTML
+  Parameters: {"user_id"=>"5"}
+  Rendering layout layouts/application.html.erb
+  Rendering decks/new.html.erb within layouts/application
+  Rendered decks/new.html.erb within layouts/application (Duration: 11.9ms | Allocations: 1218)
+  Rendered layout layouts/application.html.erb (Duration: 38.9ms | Allocations: 15753)
+Completed 200 OK in 48ms (Views: 45.4ms | ActiveRecord: 0.0ms | Allocations: 16651)
+
+
+Started GET "/auth/login" for 127.0.0.1 at 2023-04-28 00:19:45 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1410)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 3902)
+Completed 200 OK in 20ms (Views: 14.1ms | ActiveRecord: 0.0ms | Allocations: 5453)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-28 00:19:59 -0700
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session_request"=>{"email"=>"jdoe@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jdoe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/forms/session_request.rb:11:in `authenticate'
+Completed 500 Internal Server Error in 205ms (ActiveRecord: 0.2ms | Allocations: 4440)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"index", :controller=>"decks"}, missing required keys: [:user_id]
+Did you mean?  user_decks_url):
+  
+app/controllers/sessions_controller.rb:12:in `create'
+Started GET "/auth/login" for 127.0.0.1 at 2023-04-28 00:22:15 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1197)
+  Rendered layout layouts/application.html.erb (Duration: 26.1ms | Allocations: 15551)
+Completed 200 OK in 33ms (Views: 28.1ms | Allocations: 16947)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-28 00:22:25 -0700
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session_request"=>{"email"=>"jdoe@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jdoe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/forms/session_request.rb:11:in `authenticate'
+Completed 500 Internal Server Error in 207ms (ActiveRecord: 1.1ms | Allocations: 5314)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"index", :controller=>"decks"}, missing required keys: [:user_id]
+Did you mean?  user_decks_url):
+  
+app/controllers/sessions_controller.rb:12:in `create'
+Started GET "/auth/login" for 127.0.0.1 at 2023-04-28 00:25:02 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1203)
+  Rendered layout layouts/application.html.erb (Duration: 25.3ms | Allocations: 15556)
+Completed 200 OK in 32ms (Views: 26.9ms | Allocations: 16952)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-28 00:25:09 -0700
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session_request"=>{"email"=>"jdoe@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jdoe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/forms/session_request.rb:11:in `authenticate'
+Redirected to http://127.0.0.1:3000/users/2/decks
+Completed 302 Found in 218ms (ActiveRecord: 1.1ms | Allocations: 4765)
+
+
+Started GET "/users/2/decks" for 127.0.0.1 at 2023-04-28 00:25:09 -0700
+Processing by DecksController#index as TURBO_STREAM
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering decks/index.html.erb within layouts/application
+  [1m[36mDeck Load (0.2ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/views/decks/index.html.erb:6
+  Rendered decks/_deck.html.erb (Duration: 0.8ms | Allocations: 212)
+  Rendered decks/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 3467)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 5973)
+Completed 200 OK in 22ms (Views: 14.6ms | ActiveRecord: 0.7ms | Allocations: 7622)
+
+
+Started GET "/users/2/decks/new" for 127.0.0.1 at 2023-04-28 00:25:13 -0700
+Processing by DecksController#new as HTML
+  Parameters: {"user_id"=>"2"}
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms | Allocations: 539)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: deck):
+  
+app/controllers/decks_controller.rb:70:in `deck_params'
+app/controllers/decks_controller.rb:15:in `new'
+Started GET "/users/2/decks/new" for 127.0.0.1 at 2023-04-28 00:26:57 -0700
+Processing by DecksController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering decks/new.html.erb within layouts/application
+  Rendered decks/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 945)
+  Rendered layout layouts/application.html.erb (Duration: 24.9ms | Allocations: 15297)
+Completed 200 OK in 37ms (Views: 26.6ms | ActiveRecord: 0.9ms | Allocations: 19014)
+
+
+Started POST "/users/2/decks/new" for 127.0.0.1 at 2023-04-28 00:27:12 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/users/2/decks/new"):
+  
+Started GET "/users/2/decks/new" for 127.0.0.1 at 2023-04-28 00:27:12 -0700
+Processing by DecksController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering decks/new.html.erb within layouts/application
+  Rendered decks/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 667)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 2971)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 3290)
+
+
+Started GET "/users/2/decks" for 127.0.0.1 at 2023-04-28 00:27:14 -0700
+Processing by DecksController#index as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering decks/index.html.erb within layouts/application
+  [1m[36mDeck Load (0.2ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/views/decks/index.html.erb:6
+  Rendered decks/_deck.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered decks/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1077)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 3366)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.2ms | Allocations: 3716)
+
+
+Started GET "/users/2/decks/new" for 127.0.0.1 at 2023-04-28 00:27:19 -0700
+Processing by DecksController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering decks/new.html.erb within layouts/application
+  Rendered decks/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 667)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 2956)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 3251)
+
+
+Started POST "/users/2/decks/new" for 127.0.0.1 at 2023-04-28 00:27:32 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/users/2/decks/new"):
+  
+Started GET "/users/2/decks/new" for 127.0.0.1 at 2023-04-28 00:27:32 -0700
+Processing by DecksController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering decks/new.html.erb within layouts/application
+  Rendered decks/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 656)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 2954)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 3247)
+
+
+Started POST "/users/2/decks/new" for 127.0.0.1 at 2023-04-28 00:28:14 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/users/2/decks/new"):
+  
+Started GET "/users/2/decks/new" for 127.0.0.1 at 2023-04-28 00:28:16 -0700
+Processing by DecksController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering decks/new.html.erb within layouts/application
+  Rendered decks/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 933)
+  Rendered layout layouts/application.html.erb (Duration: 25.2ms | Allocations: 15285)
+Completed 200 OK in 37ms (Views: 27.1ms | ActiveRecord: 0.9ms | Allocations: 19002)
+
+
+Started GET "/users/2/decks" for 127.0.0.1 at 2023-04-28 00:28:18 -0700
+Processing by DecksController#index as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering decks/index.html.erb within layouts/application
+  [1m[36mDeck Load (0.2ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/views/decks/index.html.erb:6
+  Rendered decks/_deck.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered decks/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1110)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 3399)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.2ms | Allocations: 3769)
+
+
+Started GET "/users/2/decks/new" for 127.0.0.1 at 2023-04-28 00:29:23 -0700
+Processing by DecksController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering decks/new.html.erb within layouts/application
+  Rendered decks/new.html.erb within layouts/application (Duration: 12.3ms | Allocations: 1128)
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 3798)
+Completed 200 OK in 29ms (Views: 25.6ms | ActiveRecord: 0.0ms | Allocations: 4693)
+
+
+Started POST "/users/2/decks" for 127.0.0.1 at 2023-04-28 00:29:36 -0700
+Processing by DecksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "deck"=>{"topic"=>"Linguistics"}, "commit"=>"Create deck", "user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering decks/new.html.erb within layouts/application
+  Rendered decks/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 619)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 3037)
+Completed 422 Unprocessable Entity in 103ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 11387)
+
+
+Started POST "/users/2/decks" for 127.0.0.1 at 2023-04-28 00:30:03 -0700
+Processing by DecksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "deck"=>{"topic"=>"Linguistics"}, "commit"=>"Create deck", "user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering decks/new.html.erb within layouts/application
+  Rendered decks/new.html.erb within layouts/application (Duration: 11.0ms | Allocations: 953)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 3612)
+Completed 422 Unprocessable Entity in 27ms (Views: 23.9ms | ActiveRecord: 0.0ms | Allocations: 5346)
+
+
+Started GET "/users/2/decks" for 127.0.0.1 at 2023-04-28 00:30:04 -0700
+Processing by DecksController#index as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering decks/index.html.erb within layouts/application
+  [1m[36mDeck Load (0.2ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/views/decks/index.html.erb:6
+  Rendered decks/_deck.html.erb (Duration: 0.9ms | Allocations: 197)
+  Rendered decks/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1422)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 3712)
+Completed 200 OK in 15ms (Views: 11.8ms | ActiveRecord: 0.2ms | Allocations: 4106)
+
+
+Started GET "/users/2/decks/new" for 127.0.0.1 at 2023-04-28 00:31:18 -0700
+Processing by DecksController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering decks/new.html.erb within layouts/application
+  Rendered decks/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 960)
+  Rendered layout layouts/application.html.erb (Duration: 28.3ms | Allocations: 15313)
+Completed 200 OK in 41ms (Views: 30.2ms | ActiveRecord: 1.0ms | Allocations: 19032)
+
+
+Started POST "/users/2/decks/new" for 127.0.0.1 at 2023-04-28 00:31:20 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/users/2/decks/new"):
+  
+Started GET "/users/2/decks/new" for 127.0.0.1 at 2023-04-28 00:31:21 -0700
+Processing by DecksController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering decks/new.html.erb within layouts/application
+  Rendered decks/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 673)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 2962)
+Completed 200 OK in 12ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 3281)
+
+
+Started POST "/users/2/decks/new" for 127.0.0.1 at 2023-04-28 00:31:31 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/users/2/decks/new"):
+  
+Started GET "/users/2/decks/new" for 127.0.0.1 at 2023-04-28 00:31:31 -0700
+Processing by DecksController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering decks/new.html.erb within layouts/application
+  Rendered decks/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 676)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 2980)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 3273)
+
+
+Started GET "/users/2/decks" for 127.0.0.1 at 2023-04-28 00:31:32 -0700
+Processing by DecksController#index as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering decks/index.html.erb within layouts/application
+  [1m[36mDeck Load (0.2ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/views/decks/index.html.erb:6
+  Rendered decks/_deck.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered decks/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1082)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 3374)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.2ms | Allocations: 3724)
+
+
+Started GET "/auth/login" for 127.0.0.1 at 2023-04-28 00:31:47 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1407)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 3902)
+Completed 200 OK in 20ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 5453)
+
+
+Started POST "/auth/login" for 127.0.0.1 at 2023-04-28 00:31:59 -0700
+Processing by SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session_request"=>{"email"=>"jdoe@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jdoe@gmail.com"], ["LIMIT", 1]]
+  ↳ app/forms/session_request.rb:11:in `authenticate'
+Redirected to http://127.0.0.1:3000/users/2/decks
+Completed 302 Found in 302ms (ActiveRecord: 1.0ms | Allocations: 9124)
+
+
+Started GET "/users/2/decks" for 127.0.0.1 at 2023-04-28 00:32:00 -0700
+Processing by DecksController#index as TURBO_STREAM
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering decks/index.html.erb within layouts/application
+  [1m[36mDeck Load (0.2ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/views/decks/index.html.erb:6
+  Rendered decks/_deck.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered decks/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1021)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 3425)
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.2ms | Allocations: 3806)
+
+
+Started GET "/users/2/decks/new" for 127.0.0.1 at 2023-04-28 00:33:41 -0700
+Processing by DecksController#new as HTML
+  Parameters: {"user_id"=>"2"}
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.2ms | Allocations: 4353)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+    @deck.user_id = @user.id
+                         ^^^):
+  
+app/controllers/decks_controller.rb:17:in `new'
+Started GET "/users/2/decks/new" for 127.0.0.1 at 2023-04-28 00:34:11 -0700
+Processing by DecksController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering decks/new.html.erb within layouts/application
+  Rendered decks/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 945)
+  Rendered layout layouts/application.html.erb (Duration: 24.4ms | Allocations: 15297)
+Completed 200 OK in 36ms (Views: 26.5ms | ActiveRecord: 0.9ms | Allocations: 19014)
+
+
+Started POST "/users/2/decks/new" for 127.0.0.1 at 2023-04-28 00:34:30 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/users/2/decks/new"):
+  
+Started GET "/users/2/decks/new" for 127.0.0.1 at 2023-04-28 00:34:30 -0700
+Processing by DecksController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering decks/new.html.erb within layouts/application
+  Rendered decks/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 664)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 2968)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 3287)
+
+
