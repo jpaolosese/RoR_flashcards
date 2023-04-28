@@ -6,9 +6,9 @@
   <% @cards.each do |card| %>
     <%= render card %>
     <p>
-      <%= link_to "Show this card", card %>
+      <%= link_to "Back to user decks", user_decks_url %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New card", new_card_path %>
+<%= link_to "New card", new_user_deck_card_path %>

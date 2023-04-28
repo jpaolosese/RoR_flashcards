@@ -4,8 +4,9 @@
 
 <div id="decks">
   <% @decks.each do |deck| %>
-    <%= render deck %>
+    <%= render deck %> <br/>
   <% end %>
 </div>
 
 <%= link_to "New deck", new_user_deck_path %>
+<%= link_to "Log out", auth_login_path %>

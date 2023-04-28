@@ -22,7 +22,7 @@ class CardsController < ApplicationController
   # POST /cards or /cards.json
   def create
     @card = Card.new(card_params)
-
+    puts @card
     respond_to do |format|
       if @card.save
         @deck.card_count += 1

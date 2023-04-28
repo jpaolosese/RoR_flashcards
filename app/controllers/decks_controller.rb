@@ -1,8 +1,9 @@
 class DecksController < ApplicationController
   before_action :set_deck, only: %i[ show edit update destroy ]
+
   # GET /decks or /decks.json
   def index
-    @decks = Deck.all
+    @decks = Deck.where(user_id: params[:user_id]).all
   end
 
   # GET /decks/1 or /decks/1.json
@@ -12,7 +13,7 @@ class DecksController < ApplicationController
 
   # GET /decks/new
   def new
-    @deck = Deck.new
+    @deck = Deck.create
   end
 
   # GET /decks/1/edit
@@ -22,8 +23,10 @@ class DecksController < ApplicationController
 
   # POST /decks or /decks.json
   def create
+    d_params = deck_params
+    d_params[:card_count] = 0
+    d_params[:user_id] = @current_user
     @deck = Deck.new(deck_params)
-    @deck.card_count = 0
 
     respond_to do |format|
       if @deck.save

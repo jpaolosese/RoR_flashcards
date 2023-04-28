@@ -5,7 +5,7 @@
 <br>
 
 <div>
-  <%= form_with model: @deck, url: new_user_deck_url do |form| %>
+  <%= form_with model: @deck, url: user_decks_url do |form| %>
     <div>
       <%= form.label :topic %><br/>
       <%= form.text_field :topic %>
@@ -14,5 +14,6 @@
       <%= form.submit "Create deck" %>
     </div>
   <% end %>
+  <br/>
   <%= link_to "Back to decks", user_decks_path %>
 </div>
